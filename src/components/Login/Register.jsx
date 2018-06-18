@@ -45,7 +45,7 @@ class Register extends React.Component{
           <div className="measure">
             <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
                     </fieldset>
-
+{/* Create input fields ,Name,Email,password */}
 
           </div>
         </main>

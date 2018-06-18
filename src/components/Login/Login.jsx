@@ -17,23 +17,8 @@ class Login extends React.Component {
     this.setState({LoginPassword: event.target.value})
   }
 
-  onSubmitSignIn = () => {
-    // fetch('', {
-    //   method: 'post',
-    //   headers: {'Content-Type': 'application/json'},
-    //   body: JSON.stringify({
-    //   email: this.state.LoginMail,
-    //   password: this.state.LoginPassword
-    //   })
-    // })
-    .then(response => response.json())
-    .then(user => {
-      if (user.id){
-        this.props.loadUser(user);
-        this.props.onRouteChange('home');
-
-      }
-    })
+  onSubmitLogin = () => {
+// Handle Login 
   }
   render() {
     const { onRouteChange } = this.props;
