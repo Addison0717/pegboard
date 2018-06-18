@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route } from 'react-router-dom'
-import LandingContainer from './components/LandingContainer'
+import LandingContainer from './components/Login/LandingContainer'
 
 class App extends Component {
   render() {

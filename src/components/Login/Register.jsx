@@ -18,8 +18,8 @@ class Register extends React.Component{
   onPasswordChange = (event) => {
     this.setState({password: event.target.value})
   }
-  onSubmitSignIn = () => {
-    fetch('https://guarded-hollows-87945.herokuapp.com/register', {
+  onSubmitLogin = () => {
+    fetch('', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
