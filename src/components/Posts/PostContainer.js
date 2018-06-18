@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 
-
+import Post from './Post'
 
 class PostContainer extends React.PureComponent {
 
@@ -13,7 +13,7 @@ class PostContainer extends React.PureComponent {
     return (
       <div>
 
-
+        <Post />
 
       </div>
     )
