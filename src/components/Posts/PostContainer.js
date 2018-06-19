@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 import { makePost } from '../../actions/posts'
 
-import Post from './Post'
 import User from '../User/User'
 
 class PostContainer extends React.PureComponent {
@@ -31,19 +30,17 @@ class PostContainer extends React.PureComponent {
 
     })
 
-  
-
   }
 
   componentDidMount() {
+
+    console.log(this)
 
   }
 
   render() {
     return (
       <div>
-
-        <Post />
 
         <form onSubmit={this.handleSubmit}>
 
@@ -94,13 +91,33 @@ class PostContainer extends React.PureComponent {
 
         </form>
 
-
         <div>
 
+          {this.props.post.carpenter.employer.length > 0 &&
+            <button>Carpenter [employer]:</button>
 
-
-          {/* <Link to="/${}"></Link> */}
-
+          }
+          {this.props.post.carpenter.freelancer.length > 0 &&
+            <button>Carpenter [freelancer]:</button>
+          }
+          {this.props.post.designer.employer.length > 0 &&
+            <button>Designer [employer]:</button>
+          }
+          {this.props.post.designer.freelancer.length > 0 &&
+            <button>Designer [freelancer]:</button>
+          }
+          {this.props.post.cook.employer.length > 0 &&
+            <button>Cook [employer]:</button>
+          }
+          {this.props.post.cook.freelancer.length > 0 &&
+            <button>Cook [freelancer]:</button>
+          }
+          {this.props.post.developer.employer.length > 0 &&
+            <button>Developer [employer]:</button>
+          }
+          {this.props.post.developer.freelancer.length > 0 &&
+            <button>Developer [freelancer]:</button>
+          }
 
         </div>
 
