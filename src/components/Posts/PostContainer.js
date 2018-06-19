@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 import { makePost } from '../../actions/posts'
 
-import Post from './Post'
 import User from '../User/User'
 
 class PostContainer extends React.PureComponent {
@@ -31,7 +30,7 @@ class PostContainer extends React.PureComponent {
 
     })
 
-  
+
 
   }
 
@@ -42,8 +41,6 @@ class PostContainer extends React.PureComponent {
   render() {
     return (
       <div>
-
-        <Post />
 
         <form onSubmit={this.handleSubmit}>
 
