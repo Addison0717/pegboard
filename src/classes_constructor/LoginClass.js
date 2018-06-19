@@ -1,13 +1,11 @@
 import React from 'react'
-import newUser from '../actions/users'
 
-Class LoginClass {
-  constructor(user) {
-    super(user);
-    this.state = {
+export class LoginClass {
+  constructor(email, password, name) {
 
-    }
+    this.email : email,
+    this.password : password,
+    this.name : name
 
   }
-
-export default LoginClass
+}

@@ -1,22 +1,27 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import LoginClass from '../../classes_constructor/LoginClass'
+import newUser from '../actions/users'
+
 
 
 class Register extends React.Component{
 
-  // onNameChange = (event) => {
-  //   this.setState({name: event.target.value})
-  // }
-  // onEmailChange = (event) => {
-  //   this.setState({email: event.target.value})
-  // }
-  // onPasswordChange = (event) => {
-  //   this.setState({password: event.target.value})
-  // }
-  // onSubmitLogin = () => {
+  onNameChange = (event) => {
+    this.setState({name: event.target.value})
+  }
+  onEmailChange = (event) => {
+    this.setState({email: event.target.value})
+  }
+  onPasswordChange = (event) => {
+    this.setState({password: event.target.value})
+  }
+  onSubmitLogin = () => {
 
-  //   })
-  // }
+  this.props.newUser(new LoginClass(this.state.name, this.state.email, this.state.password))
+
+    }
+  
 
   render() {
     return(
@@ -32,6 +37,7 @@ class Register extends React.Component{
                          type="text"
                          name="name"
                          id="name"
+                         onChange={this.onNameChange}
                          />
                     </div>
                     <div className="mt3">
@@ -41,6 +47,7 @@ class Register extends React.Component{
                         type="email"
                         name="email-address"
                         id="email-address"
+                        onChange={this.onEmailChange}
 
                        />
                     </div>
@@ -51,11 +58,13 @@ class Register extends React.Component{
                          type="password"
                          name="password"
                          id="password"
+                         onChange={this.onPasswordChange}
                         />
                     </div>
                   </fieldset>
                   <div className="">
                     <input
+
                       className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
                        type="submit"
                         value="Register" />
