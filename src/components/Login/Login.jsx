@@ -19,8 +19,8 @@ class Login extends React.Component {
 
   onSubmitLogin = () => {
     // Handle Login
-    // this.state.LoginMail
-    // this.state.LoginPassword
+    // this.props.LoginMail
+    // this.props.LoginPassword
   }
   render() {
     // const { onRouteChange } = this.props;
@@ -41,7 +41,8 @@ class Login extends React.Component {
         <div className="">
           <input className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
             type="submit"
-            value="Sign in"/>
+            value="Sign in"
+            />
         </div>
         <div className="mv3">
           <Link class="link underline blue hover-orange" to="/Register">Not A Member?</Link>
