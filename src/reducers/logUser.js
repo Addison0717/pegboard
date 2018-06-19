@@ -1,7 +1,11 @@
 const reducer = (state = null, action = {}) => {
   switch (action.type) {
   case 'SELECT_USER':
-    return action.payload
+    return
+
+    action.payload
+
+    // action.payload
   default:
     return state
   }

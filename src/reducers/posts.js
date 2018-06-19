@@ -32,7 +32,7 @@ const posts = {
           postBody: {
             postId:1,
             description: 'looking for somebody',
-            category: 'cooking'
+            category: 'carpenter'
           }
         }
       ],

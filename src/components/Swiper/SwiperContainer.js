@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 
+import { logUser } from '../../actions/logUser'
+
 import Swiper from './Swiper'
 
 class SwiperContainer extends React.PureComponent {
@@ -12,7 +14,7 @@ class SwiperContainer extends React.PureComponent {
 	renderUser() {
 		return (
 			<div>
-				<Swiper user={this.props.user} />
+				<Swiper user={this.props.user} logUser={this.props.logUser}/>
 				<div className="actions">
 					<button className="dislike-button" onClick={this.props.dislikeAction}>Dislike</button>
 					<button className="like-button" onClick={this.props.likeAction}>Like</button>
@@ -38,4 +40,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {  })(SwiperContainer)
+export default connect(mapStateToProps, { logUser })(SwiperContainer)
