@@ -20,11 +20,12 @@ class Register extends React.Component {
     this.setState({password: event.target.value})
   }
   onSubmitLogin = () => {
-    // user(props)
-  
-    this.setState({loginToHome: true})
 
-    // this.setState({loginToHome: true})
+  this.props.newUser(new LoginClass(this.state.name, this.state.email, this.state.password))
+  .then(user => {
+    this.setState({loginToHome: true})} )
+
+
 
 }
 
