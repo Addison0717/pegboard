@@ -1,38 +1,15 @@
 import React from 'react';
+import Login from './Login'
+import Register from './Register'
 
-
-class LandingContainer extends React.Component{
-<<<<<<< HEAD
-
-
-// if (!this.user.active){
-//   <Login/>
-// <Register/>
-//
-// }else if()
-//
-}
-=======
-  componentDidMount() {
-
+class LandingContainer extends React.Component {
+  render() {
+    return (<div>
+      <Login/>
+      <Register/>
+    </div>)
   }
 
-
-// if (!this.props.user.active){
-//   <Login/>
-// <Register/>
-//
-// }else if(this.props.user.active){
-
-// }
-//
 }
-const mapStateToProps = (state) => {
-  return {
-
-  }
-}
-
->>>>>>> master
 
 export default LandingContainer

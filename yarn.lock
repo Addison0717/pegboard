@@ -1387,7 +1387,7 @@ chardet@^0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.4.2.tgz#b5473b33dc97c424e5d98dc87d55d4d8a29c8bf2"
 
-"chart.js@github:chartjs/Chart.js":
+chart.js@chartjs/Chart.js:
   version "2.7.2"
   resolved "https://codeload.github.com/chartjs/Chart.js/tar.gz/a0a195f353467a71cbf73aef086249902c53c5a4"
   dependencies:
@@ -7019,11 +7019,11 @@ tachyons-background-size@^5.0.4:
   version "5.0.5"
   resolved "https://registry.yarnpkg.com/tachyons-background-size/-/tachyons-background-size-5.0.5.tgz#445fbe008125308ebe750262649e3f3f7c9de56f"
 
-"tachyons-base@github:eggheadio/tachyons-base#20454fc":
+tachyons-base@eggheadio/tachyons-base#20454fc:
   version "1.4.1"
   resolved "https://codeload.github.com/eggheadio/tachyons-base/tar.gz/20454fc350c47b5b3e35f8cfa195bc1fcbbf7646"
 
-"tachyons-border-colors@github:eggheadio/tachyons-border-colors#d3e31f2":
+tachyons-border-colors@eggheadio/tachyons-border-colors#d3e31f2:
   version "4.2.3"
   resolved "https://codeload.github.com/eggheadio/tachyons-border-colors/tar.gz/d3e31f21af4f1d16a921add79753af15c66e2bd8"
 
@@ -7043,7 +7043,7 @@ tachyons-borders@^3.0.3:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/tachyons-borders/-/tachyons-borders-3.0.4.tgz#4d52c19ad3bcb7817a5c1078a2eb9dfb0b3dc40f"
 
-"tachyons-box-shadow@github:eggheadio/tachyons-box-shadow#cb5fb6e":
+tachyons-box-shadow@eggheadio/tachyons-box-shadow#cb5fb6e:
   version "2.1.0"
   resolved "https://codeload.github.com/eggheadio/tachyons-box-shadow/tar.gz/cb5fb6e0c0d360536e66b2c92909bd36d5939b77"
 
@@ -7059,7 +7059,7 @@ tachyons-code@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/tachyons-code/-/tachyons-code-1.0.0.tgz#5c3defc4b9250c64227dcf95b961fc5c1d8fcb28"
 
-"tachyons-colors@github:eggheadio/tachyons-colors#28fd66a":
+tachyons-colors@eggheadio/tachyons-colors#28fd66a:
   version "5.3.2"
   resolved "https://codeload.github.com/eggheadio/tachyons-colors/tar.gz/28fd66ae2b0ed9ca426b2e65f70b241377f18b40"
 
@@ -7129,7 +7129,7 @@ tachyons-egghead@^2.3.1:
     tachyons-word-break "^3.0.3"
     tachyons-z-index "^1.0.7"
 
-"tachyons-flexbox@github:eggheadio/tachyons-flexbox#6e8ddff":
+tachyons-flexbox@eggheadio/tachyons-flexbox#6e8ddff:
   version "2.0.3"
   resolved "https://codeload.github.com/eggheadio/tachyons-flexbox/tar.gz/6e8ddffddd2e23870e8821880b87757e9609aeb4"
 
@@ -7209,11 +7209,11 @@ tachyons-rotations@^1.0.2:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/tachyons-rotations/-/tachyons-rotations-1.0.4.tgz#18b628ef99dd1c7c3ea1b0806ad68c3a83f72c3c"
 
-"tachyons-skins-pseudo@github:eggheadio/tachyons-skins-pseudo#06f4d9f":
+tachyons-skins-pseudo@eggheadio/tachyons-skins-pseudo#06f4d9f:
   version "1.0.3"
   resolved "https://codeload.github.com/eggheadio/tachyons-skins-pseudo/tar.gz/06f4d9f29d864e900cec48b16a03943b74f8a982"
 
-"tachyons-skins@github:eggheadio/tachyons-skins#d40295c":
+tachyons-skins@eggheadio/tachyons-skins#d40295c:
   version "4.0.2"
   resolved "https://codeload.github.com/eggheadio/tachyons-skins/tar.gz/d40295ccbee6b9bc794055385470d481b169b456"
 
@@ -7272,6 +7272,10 @@ tachyons-word-break@^3.0.3:
 tachyons-z-index@^1.0.7:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/tachyons-z-index/-/tachyons-z-index-1.0.9.tgz#1148f6fc595c289ad65a47cbd9a4c2a34a95068c"
+
+tachyons@^4.10.0:
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/tachyons/-/tachyons-4.10.0.tgz#87fa088e88d9759983f2a1b0efd01d767bbef87b"
 
 tapable@^0.2.7:
   version "0.2.8"
