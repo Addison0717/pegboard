@@ -45,7 +45,7 @@ class Login extends React.Component {
             />
         </div>
         <div className="mv3">
-          <Link class="link underline blue hover-orange" to="/Register">Not A Member?</Link>
+          <Link className="link underline blue hover-orange" to="/Register">Not A Member?</Link>
         </div>
       </main>
     </article>);
