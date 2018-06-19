@@ -26,7 +26,8 @@ const users = [{
           description: 'looking for somebody',
           category: 'cooking'
         }
-      }]
+      }],
+      posts: []
     }
   },
   {
@@ -34,7 +35,8 @@ const users = [{
       name: 'maria',
       notification:{
         match: [],
-        request: []
+        request: [],
+        posts: []
       }
     },
     {
@@ -42,7 +44,8 @@ const users = [{
         name: 'maria',
         notification:{
           match: [],
-          request: []
+          request: [],
+          posts: []
         }
       },
       {
@@ -50,7 +53,8 @@ const users = [{
           name: 'maria',
           notification:{
             match: [],
-            request: []
+            request: [],
+            posts: []
           }
         }]
 
