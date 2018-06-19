@@ -1,14 +1,16 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import LoginClass from '../../classes_constructor/LoginClass'
-// import newUser from '../actions/users'
+import {LoginClass} from '../../classes_constructor/LoginClass'
+import newUser from '../../actions/users'
 import {Redirect} from 'react-router-dom'
+import { connect } from 'react-redux'
+
 
 class Register extends React.Component {
   state = {
-    loginToHome: false,
+    loginToHome: false
   }
-// const user = this.props.newUser(new LoginClass(this.state.name, this.state.email, this.state.password))
+  // const user = this.props.newUser(new LoginClass(this.state.name, this.state.email, this.state.password))
 
   onNameChange = (event) => {
     this.setState({name: event.target.value})
@@ -21,16 +23,14 @@ class Register extends React.Component {
   }
   onSubmitLogin = () => {
 
-  this.props.newUser(new LoginClass(this.state.name, this.state.email, this.state.password))
-  .then(user => {
-    this.setState({loginToHome: true})} )
+    this.props.newUser(new LoginClass(this.state.name, this.state.email, this.state.password))
+    .then(user => {
+      this.setState({loginToHome: true})
+    })
 
-
-
-}
+  }
 
   render() {
-
 
     return (<article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
       <main className="pa4 black-80">
@@ -39,45 +39,34 @@ class Register extends React.Component {
             <legend className="f1 fw6 ph0 mh0">Register</legend>
             <div className="mt3">
               <label className="db fw6 lh-copy f6" htmlFor="name">Name</label>
-              <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                type="text"
-                name="name"
-                id="name"
-                onChange={this.onNameChange}/>
+              <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="text" name="name" id="name" onChange={this.onNameChange}/>
             </div>
             <div className="mt3">
               <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
-              <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                 type="email"
-                 name="email-address"
-                 id="email-address" onChange={this.onEmailChange}/>
+              <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="email-address" id="email-address" onChange={this.onEmailChange}/>
             </div>
             <div className="mv3">
               <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
-              <input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                type="password"
-                 name="password"
-                 id="password" onChange={this.onPasswordChange}/>
+              <input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="password" id="password" onChange={this.onPasswordChange}/>
             </div>
           </fieldset>
           <div className="">
-            <input className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
-              type="submit"
-              value="Register"
-              onClick={this.onSubmitLogin}
-            />
+            <input className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Register" onClick={this.onSubmitLogin}/>
           </div>
 
         </div>
         <br/>
-        <Link className="link underline blue hover-orange" to="/">Already A Member?</Link>
+        <Link className="link underline green hover-orange" to="/">Already A Member?</Link>
 
       </main>
-        <div>{this.state.loginToHome === true&&<Redirect to='/home'/>}</div>
+      <div>{this.state.loginToHome === true && < Redirect to = '/home' />}</div>
 
     </article>);
   }
 
 }
 
-export default Register;
+const mapStateToProps = (state) => {return {reducers: state.reducers}}
+
+
+export default connect(mapStateToProps, { newUser })(Register)

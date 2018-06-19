@@ -1,11 +1,12 @@
 import React from 'react'
 
-export class LoginClass {
+export class LoginClass  {
   constructor(email, password, name) {
 
-    email,
-    password,
-    name
+
+    this.email = email,
+    this.password = password,
+    this.name = name
 
   }
 }
