@@ -12,15 +12,8 @@ import SwiperContainer from './components/Swiper/SwiperContainer'
 
 class App extends Component {
   render() {
-<<<<<<< HEAD
     return (<div className="App">
       <img src={logo} alt="PegBoardLogo" className="Logo"/>
-=======
-    return (
-
-      <div className="App">
-
->>>>>>> 30f3af07237475c3648d23f0b420a77e96ea4959
       <Route exact="exact" path="/" component={Login}/>
       <Route path="/Register" component={Register}/>
       <Route exact path="/home" component={PostContainer} />
