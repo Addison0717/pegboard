@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom';
 
 import { makePost } from '../../actions/posts'
 
@@ -29,7 +30,9 @@ class PostContainer extends React.PureComponent {
       description: this.state.description
 
     })
-    
+
+  
+
   }
 
   componentDidMount() {
@@ -90,6 +93,16 @@ class PostContainer extends React.PureComponent {
           <input type="submit" value="Submit" />
 
         </form>
+
+
+        <div>
+
+
+
+          {/* <Link to="/${}"></Link> */}
+
+
+        </div>
 
       </div>
     )

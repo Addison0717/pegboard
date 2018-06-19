@@ -34,7 +34,7 @@ class SwiperContainer extends React.PureComponent {
 
 const mapStateToProps = (state) => {
   return {
-
+    user: state
   }
 }
 

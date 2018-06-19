@@ -6,10 +6,13 @@ export default (state = posts, action = {}) => {
     let type = action.payload.type
     // console.log(state[category][type], action.payload.type)
     state[category][type].push({
-      postId: null,
-      name: action.payload.name,
-      description: action.payload.description,
-      categoryId: null
+      posterId: null,
+      postBody: {
+        postId: null,
+        name: action.payload.name,
+        description: action.payload.description,
+        category: null
+      }
     })
 
     return {
@@ -23,59 +26,35 @@ export default (state = posts, action = {}) => {
 
 const posts = {
     carpenter: {
-      employer:[{
-        postId: null,
-        name: "Bills Carpentry",
-        description: "Only the best carpentry in the Amsterdam Area",
-        categoryId: null
-      }],
-      freelancer: [{
-        postId: null,
-        name: "Mike Woodman",
-        description: "I am Mike and I like Carpentry",
-        categoryId: null
-      }]
+      employer:[
+        {
+          posterId: 3,
+          postBody: {
+            postId:1,
+            description: 'looking for somebody',
+            category: 'cooking'
+          }
+        }
+      ],
+      freelancer: []
     },
     designer: {
-      employer:[{
-        postId: null,
-        name: "ABC Designs",
-        description: "Premier Designs at Premier Prices",
-        categoryId: null
-      }],
+      employer:[],
       freelancer: [{
-        postId: null,
-        name: "Donna Designalot",
-        description: "Im Donna and I like to design",
-        categoryId: null
+        posterId: 2,
+        postBody: {
+          postId:1,
+          description: 'looking for somebody',
+          category: 'designing'
+        }
       }]
     },
     cook: {
-      employer:[{
-        postId: null,
-        name: "Libertine Cantina",
-        description: "The best looking food in Amsterdam!",
-        categoryId: null
-      }],
-      freelancer: [{
-        postId: null,
-        name: "Dylan Cooker",
-        description: "Im Dylan and I like to cook!",
-        categoryId: null
-      }]
+      employer:[],
+      freelancer: []
     },
     developer: {
-      employer:[{
-        postId: null,
-        name: "Codaisseur Academy",
-        description: "Training the best junior developers in Amsterdam",
-        categoryId: null
-      }],
-      freelancer: [{
-        postId: null,
-        name: "Cody Codesalot",
-        description: "Im Cody and I like to code a lot",
-        categoryId: null
-      }]
+      employer:[],
+      freelancer: []
     }
   }
