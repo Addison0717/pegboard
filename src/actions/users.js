@@ -1,6 +1,7 @@
 const NEW_USER = 'NEW_USER'
 const MAKE_REQUEST = 'MAKE_REQUEST'
 const MAKE_MATCH = 'MAKE_MATCH'
+const SELECT_USER = 'SELECT_USER'
 
 export const newUser = (user) => {
   return {
@@ -19,6 +20,13 @@ export function makeRequest(request) {
 export function makeMatch(request) {
   return {
     type: MAKE_MATCH,
+    payload: request
+  }
+}
+
+export function LogUser(request) {
+  return {
+    type: SELECT_USER,
     payload: request
   }
 }

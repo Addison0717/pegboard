@@ -12,7 +12,9 @@ import SwiperContainer from './components/Swiper/SwiperContainer'
 
 class App extends Component {
   render() {
-    return (<div className="App">
+    return (
+
+      <div className="App">
       <img src={logo} alt="PegBoardLogo" className="Logo"/>
       <Route exact path="/" component={Login}/>
       <Route exact path="/Register" component={Register}/>

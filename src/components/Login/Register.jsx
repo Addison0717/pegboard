@@ -20,11 +20,11 @@ class Register extends React.Component {
     this.setState({password: event.target.value})
   }
   onSubmitLogin = () => {
+    const user = new LoginClass(this.state.email,this.state.password,this.state.name)
+    // console.log(user)
+    this.props.newUser(user)
+   this.setState({loginToHome: true})
 
-    this.props.newUser(new LoginClass(this.props.name, this.props.email, this.props.password))
-    .then(user => {
-      this.setState({loginToHome: true})
-    })
 
   }
   render() {
@@ -83,4 +83,4 @@ class Register extends React.Component {
 const mapStateToProps = (state) => {return {reducers: state.reducers}}
 
 
-export default connect(mapStateToProps,  newUser)(Register)
+export default connect(mapStateToProps,  {newUser})(Register)

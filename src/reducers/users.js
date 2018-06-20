@@ -37,6 +37,8 @@ const users = {
   2: {
       userId: 2,
       name: 'maria',
+      email: 'email@email.com',
+      password: '123pwd',
       notification:{
         match: [],
         request: [],
@@ -67,8 +69,10 @@ const users = {
 export default (state = users, action = {}) => {
 
   switch (action.type) {
+  case 'SELECT_USER':
+    return action.payload
   case 'NEW_USER':
-    return [...state, action.payload]
+    return {...state, [action.payload.Id]: action.payload.body}
   case 'MAKE_REQUEST':
     return JSON.parse(JSON.stringify(state))[action.payload.posterId].notification.request.push(action.payload)
   // case 'MAKE_MATCH':

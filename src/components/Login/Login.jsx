@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import {Redirect} from 'react-router-dom'
+import { connect } from 'react-redux'
+import {LogUser} from '../../actions/users'
 
 
 
@@ -14,20 +16,29 @@ class Login extends React.Component {
       }
   }
   onEmailChange = (event) => {
+    console.log(this.state.LoginMail)
     this.setState({LoginMail: event.target.value})
   }
   onPasswordChange = (event) => {
     this.setState({LoginPassword: event.target.value})
   }
 
-  onSubmitLogin = () => {
-    // Handle Login
-    // onEmailChange() === !null
-    // onPasswordChange() === !null
+  onSubmitLogin = (e) => {
+    e.preventDefault()
+    console.log(this.state.LoginMail)
+  const userLogin = Object.values(this.props.users)
+   .filter( (user)=>{
+  return (user.email === this.state.LoginMail && user.password === this.state.LoginPassword)
+})
+if(userLogin.length === 1){
+    console.log(userLogin[0].userId)
+    this.props.LogUser(userLogin[0].userId)
+    this.setState({loginToHome: true})
+}
 
-    // .then(user => {
-      this.setState({loginToHome: true})
-    // })
+    console.log(userLogin)
+
+
   }
   render() {
 
@@ -41,14 +52,16 @@ class Login extends React.Component {
             <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
               type="email"
                name="email-address"
-               id="email-address"/>
+               id="email-address"
+             onChange={this.onEmailChange}/>
           </div>
           <div className="mv3">
             <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
             <input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
               type="password"
                name="password"
-                id="password"/>
+                id="password"
+              onChange={this.onPasswordChange}/>
           </div>
         </fieldset>
         <div className="">
@@ -59,7 +72,7 @@ class Login extends React.Component {
             />
         </div>
         <div className="mv3">
-          <Link className="link underline blue hover-orange" to="/Register">Not A Member?</Link><br/>
+          <Link className="link underline blue hover-orange" to="/Register">Not A Member?</Link><br/><br/>
           <Link  to="/Register"><input  className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
             name="Register-redirect"
             id="Register-redirect"
@@ -72,4 +85,8 @@ class Login extends React.Component {
   }
 }
 
-export default Login;
+
+const mapStateToProps = (state) => {return {users: state.users}}
+
+
+export default connect(mapStateToProps, {LogUser})(Login)
