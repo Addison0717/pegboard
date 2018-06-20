@@ -1,27 +1,28 @@
 export default (state = posts, action = {}) => {
-  switch(action.type){
-  case 'MAKE_POST':
+ switch(action.type){
+ case ‘ADD_POST’:
 
-    let category = action.payload.category
-    let type = action.payload.type
-    // console.log(state[category][type], action.payload.type)
-    state[category][type].push({
-      posterId: null,
-      postBody: {
-        postId: null,
-        name: action.payload.name,
-        description: action.payload.description,
-        category: null
-      }
-    })
+ let category = action.payload.category
+   let type = action.payload.type
+   // console.log(state[category][type], action.payload.type)
+   state[category][type].push({
+     posterId: null,
+     postBody: {
+       postId: null,
+       name: action.payload.name,
+       description: action.payload.description,
+       category: null
+     }
+   })
 
-    return {
-      ...state,
-    }
+   return {
+     ...state,
+   }
 
-  default:
-    return state
-  }
+
+ default:
+   return state
+ }
 }
 
 const posts = {

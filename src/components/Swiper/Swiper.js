@@ -1,31 +1,44 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-
+import React, { Component } from ‘react’;
+import { connect } from ‘react-redux’;
+import { Link } from ‘react-router-dom’;
 
 
 class Swiper extends Component{
-	render() {
-		return (
-			<div className="user">
-		
 
-				<div>
-					{/* <span className="name">{this.props.user.name}</span> */}
-					{/* <span className="birthday">{this.props.user.birthday}</span> */}
-					{/* <span className="city">{this.props.user.city}</span> */}
+    render() {
+        const category = this.props.matchParams.category
 
-          {/* <span className="bio">{this.props}</span> */}
+        let type = this.props.matchParams.type
 
-					{console.log(this.props)}
+        if(this.props.matchParams.type === ‘freelancer’){
+            type = ‘employer’
+        } else if (this.props.matchParams.type === ‘employer’){
+            type = ‘freelancer’
+        }
+
+        console.log(this.type)
+
+        return (
+            <div className=“user”>
 
 
+                <div>
 
+                    {console.log(‘THIS’,this)}
+                    {console.log(‘Type’, type)}
 
-				</div>
-			</div>
-		)
-	}
+                    {
+                        this.props.user.posts[category][type]
+                        // .filter((x) => x.posterId !== this.props.user.logUser)
+                        .map((x) => {
+                            return <h1 key={x.posterId}>{x.postBody.description}</h1>
+                        })
+                    }
+
+                </div>
+            </div>
+        )
+    }
 }
 
 export default Swiper;
