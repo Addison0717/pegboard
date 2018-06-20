@@ -1,6 +1,6 @@
-import React, { Component } from ‘react’;
-import { connect } from ‘react-redux’;
-import { Link } from ‘react-router-dom’;
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 class Swiper extends Component{
@@ -10,22 +10,22 @@ class Swiper extends Component{
 
         let type = this.props.matchParams.type
 
-        if(this.props.matchParams.type === ‘freelancer’){
-            type = ‘employer’
-        } else if (this.props.matchParams.type === ‘employer’){
-            type = ‘freelancer’
+        if(this.props.matchParams.type === 'freelancer'){
+            type = 'employer'
+        } else if (this.props.matchParams.type === 'employer'){
+            type = 'freelancer'
         }
 
         console.log(this.type)
 
         return (
-            <div className=“user”>
+            <div className="user">
 
 
                 <div>
 
-                    {console.log(‘THIS’,this)}
-                    {console.log(‘Type’, type)}
+                    {console.log('THIS',this)}
+                    {console.log('Type', type)}
 
                     {
                         this.props.user.posts[category][type]

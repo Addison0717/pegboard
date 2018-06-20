@@ -1,7 +1,7 @@
-import * as React from ‘react’
-import { connect } from ‘react-redux’
+import * as React from 'react'
+import { connect } from 'react-redux'
 
-import Swiper from ‘./Swiper’
+import Swiper from './Swiper'
 
 class SwiperContainer extends React.PureComponent {
 
@@ -13,9 +13,9 @@ class SwiperContainer extends React.PureComponent {
         return (
             <div>
                 <Swiper user={this.props.user} matchParams={this.props.match.params}/>
-                <div className=“actions”>
-                    <button className=“dislike-button” onClick={this.props.dislikeAction}>Dislike</button>
-                    <button className=“like-button” onClick={this.props.likeAction}>Like</button>
+                <div className="actions">
+                    <button className="dislike-button" onClick={this.props.dislikeAction}>Dislike</button>
+                    <button className="like-button" onClick={this.props.likeAction}>Like</button>
                 </div>
             </div>
         );

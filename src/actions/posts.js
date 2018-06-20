@@ -1,5 +1,5 @@
-export const MAKE_POST = ‘MAKE_POST’
-export const ADD_POST = ‘ADD_POST’
+export const MAKE_POST = 'MAKE_POST'
+export const ADD_POST = 'ADD_POST'
 
 export function makePost(post) {
  return {

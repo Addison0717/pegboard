@@ -1,6 +1,6 @@
 export default (state = posts, action = {}) => {
  switch(action.type){
- case ‘ADD_POST’:
+ case 'ADD_POST':
 
  let category = action.payload.category
    let type = action.payload.type

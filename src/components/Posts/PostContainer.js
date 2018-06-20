@@ -1,13 +1,13 @@
-import * as React from ‘react’
-import { connect } from ‘react-redux’
-import { Link } from ‘react-router-dom’;
+import * as React from 'react'
+import { connect } from 'react-redux'
+import { Link } from 'react-router-dom';
 
-import { makePost } from ‘../../actions/posts’
-import { addPost } from ‘../../actions/posts’
-import { logUser } from ‘../../actions/logUser’
-import NewPost from ‘./NewPost’
+import { makePost } from '../../actions/posts'
+import { addPost } from '../../actions/posts'
+// import { logUser } from '../../actions/logUser'
+// import NewPost from './NewPost'
 
-import User from ‘../User/User’
+import User from '../User/User'
 
 class PostContainer extends React.PureComponent {
 
@@ -51,53 +51,53 @@ class PostContainer extends React.PureComponent {
 
          <label>
 
-           <div className=“formElement”>
+           <div className="formElement">
            <h2>carpenter</h2>
-           <input type=“radio” name=“category” value=“carpenter” onChange={this.handleChange}/>
+           <input type="radio" name="category" value="carpenter" onChange={this.handleChange}/>
 
            <h2>designer</h2>
-           <input type=“radio” name=“category” value=“designer” onChange={this.handleChange}/>
+           <input type="radio" name="category" value="designer" onChange={this.handleChange}/>
 
            <h2>cook</h2>
-           <input type=“radio” name=“category” value=“cook” onChange={this.handleChange}/>
+           <input type="radio" name="category" value="cook" onChange={this.handleChange}/>
 
            <h2>developer</h2>
-           <input type=“radio” name=“category” value=“developer” onChange={this.handleChange}/>
+           <input type="radio" name="category" value="developer" onChange={this.handleChange}/>
            </div>
 
          </label>
 
          <label>
 
-           <div className=“formElement”>
+           <div className="formElement">
            <h2>Employer</h2>
-           <input type=“radio” name=“type” value=“employer” onChange={this.handleChange}/>
+           <input type="radio" name="type" value="employer" onChange={this.handleChange}/>
 
            <h2>Freelancer</h2>
-           <input type=“radio” name=“type” value=“freelancer” onChange={this.handleChange}/>
+           <input type="radio" name="type" value="freelancer" onChange={this.handleChange}/>
            </div>
 
          </label>
 
 
-         <div className=“formElement”>
+         <div className="formElement">
              <label>
              Name:
-             <input type=“text” name=“name” onChange={this.handleChange}/>
+             <input type="text" name="name" onChange={this.handleChange}/>
            </label>
 
            <label>
              Description:
-             <input type=“text” name=“description” onChange={this.handleChange}/>
+             <input type="text" name="description" onChange={this.handleChange}/>
            </label>
          </div>
 
-         <input type=“submit” value=“Submit” />
+         <input type="submit" value="Submit" />
 
        </form>
 
        <div>
-         {!some && ‘loading’}
+         {!some && 'loading'}
          {some && some.map(post => {
            return <Link to = {`/matcher/${post.postBody.category}/${post.postBody.type}`}><button key = {post.postBody.postId}>{post.postBody.category}</button></Link>
          })}
