@@ -6,7 +6,7 @@ import Swiper from './Swiper'
 class SwiperContainer extends React.PureComponent {
 
   componentWillMount() {
-
+    console.log(this.props.match.params.category)
 	}
 
 	renderUser() {
