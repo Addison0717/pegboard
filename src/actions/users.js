@@ -2,7 +2,7 @@ const NEW_USER = 'NEW_USER'
 const MAKE_REQUEST = 'MAKE_REQUEST'
 const MAKE_MATCH = 'MAKE_MATCH'
 
-export function newUser(user) {
+export const newUser = (user) => {
   return {
     type: NEW_USER,
     payload: user
